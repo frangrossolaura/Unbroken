@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+    
+.descuento {
+    background-color:rgb(28, 28, 28);
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0px 8px 0px;
+    width: 100%;
+}
+
+nav {    
+    background-color: transparent;
+    padding: 11px 50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100% ;
+    transition: background-color 0.3s ease-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap:40px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    transition: color 0.5s ease;
+}
+
+nav h2 {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+nav:hover {
+    background-color: white;
+}
+
+nav:hover ul {
+    color: black;
+}
+
+nav:hover h2 {
+    color: black;
+}
+
+.nav ul li img {
+    height: 1px;
+    width: 1px;
+    display: none;
+}
+
+.principal {
+    position: relative;
+    background-image: url(/imagenes/primerbanner.jpg);
+    background-size: cover;
+    height: 620px;
+}
+
+.principal img {
+    height: 75px;
+    width: 250px;
+}
+
+.contenido-principal {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 200px;
+    left:50px;
+    width: 50%;
+}
+
+.contenido-principal p {
+    font-size: 25px;
+    font-weight:300;
+}
+
+.contenido-principal h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.contenido-principal button {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.contenido-principal button:hover {
+    background-color:black;
+    color: white;  
+    border-color:white;
+}
+
+.seccion-productos {
+    padding: 40px 50px;
+}
+
+.seccion-productos h2 {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.seccion-productos p {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productitos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.productitos:hover {
+    padding: 10px 10px;
+    background-color: rgb(244, 244, 244);
+    transition: color 1s ease;
+    border-radius: 5px;
+}
+
+.productitos img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nombre-precio {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 10px 10px;
+}
+
+.nombre-precio h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nombre-precio h4 {
+    font-size: 20px;
+    font-weight: 400;
+    flex-grow: 0; /* Evita que h4 crezca */
+    white-space: nowrap; /* Asegura que no se corte el texto en líneas */
+}
+
+.productitos h5 {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px 10px 10px 10px;
+    color: #983636;
+}
+
+.button-comprar {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px 35px;
+
+    background-color: black;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/*
+Cuando esté en UN DIV de la sección productos y haga hover en la imagen...
+*/
+
+.productitos:hover img {
+    filter: blur(3px);
+}
+
+/*
+Cuando esté en UN DIV de la sección productos y haga hover en el button...
+*/
+
+.productitos:hover .button-comprar {
+    opacity: 1;
+    pointer-events: auto;
+    border-color: white;
+}
+
+.seccion-banner {
+    background-image: url(/imagenes/segundobanner.jpg);
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.seccion-banner h2 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.seccion-planes {
+    padding: 40px 50px;
+}
+
+.seccion-planes h2 {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.seccion-planes p {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.planes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+}
+
+.opciones:hover {
+    padding: 10px 10px;
+    background-color: rgb(244, 244, 244);
+    transition: color 1s ease;
+    border-radius: 5px;
+}
+
+.opciones img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.button-plan {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px 35px;
+
+    background-color: black;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.opciones:hover img {
+    filter: blur(3px);
+}
+
+.opciones:hover .button-plan {
+    opacity: 1;
+    pointer-events: auto;
+    border-color: white;
+}
+
+.descripcion-plan {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 10px 10px;
+}
+
+.descripcion-plan h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #983636
+}
+
+.descripcion-plan h4 {
+    font-size: 20px;
+    font-weight: 500;
+    flex-grow: 0; /* Evita que h4 crezca */
+    white-space: nowrap; /* Asegura que no se corte el texto en líneas */
+}
+
+.opciones h5 {
+    font-size: 17px;
+    font-weight: 400;
+    padding: 0px 10px 10px 10px;;
+}
+
+.contacto {
+    background-color: rgb(228, 228, 228);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto h3 {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+.contacto h4 {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 12px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    padding: 40px 40px 0px 40px;
+}
+
+form input {
+    width: 700px;
+    height: 45px;
+    background-color: white;
+    border: solid 0.5px grey;
+    border-radius: 8px;
+    font-size: 20px;
+    color:black;
+    padding-left: 14px;
+}
+
+::placeholder {
+    color:grey;
+}
+
+.button-enviar {
+    background-color: black;
+    color: #FFFFFF;
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    padding: 0px;
+}
+
+.button-enviar:hover{
+    background-color: #983636;
+}
+
+footer {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.footer-bot {
+    width: 100%;
+    background-color: white;
+    padding: 5px 0px 5px 0px;
+}
+
+.footer-bot h3 {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer-top {
+    padding: 70px 200px 30px 50px;
+    height: 300px;
+    /* width: 100%; */
+    display: flex;
+    gap: 150px;
+    align-items: flex-start;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-1 h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-1 img {
+    height: 75px;
+    width: 250px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons img {
+    height: 35px;
+    width: 35px;
+}
+
+.crossfy {
+    border-radius: 6px;
+}
+
+.footer-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+/* Para aplicar gap a las LI de las UL, necesitaas aplicarle al contenedor UL un dsplay flex!! */
+
+.footer-a ul, .footer-c ul { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-a ul li,.footer-c ul li {
+    font-size: 18px;
+    list-style: none;
+    padding: 0px;
+}
+
+.footer-b {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-b h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.footer-b h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media (max-width: 1145px) {
+
+    .footer-top {
+        padding: 70px 75px 30px 75px;
+        gap: 75px;
+    }
+
+    .footer-2 {
+        gap: 90px;
+    }
+}
+
+@media (max-width: 1030px) {
+
+    .footer-2 {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .descuento {
+        font-size: 11px;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    nav {
+        background-color: white;
+        width: 100%;
+        padding: 11px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Ocultamos todas todas las ul (listas) */
+
+    .nav ul {
+        display: none;
+    }
+
+    /* Mostramos solamente la primera ul (que es la que contiene el menu hamburguesa) */
+
+    .nav:first-child ul {
+        display: flex;
+    }
+
+    /* Ocultamos TODOS los li de la primer ul  */
+
+    .nav:first-child ul li {
+        display: none;
+    }
+
+    /* Solamente mostramos el ultimo li de la primer ul (osea, mostramos el menu hamburguesa) */
+
+    .nav:first-child ul li:last-child {
+        display: block;
+    }
+
+    /* Le doy este margin left al logo para que quede bien centrado*/
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    /* Muestro y ajusto el tamaño del menu */
+    
+    .nav ul li:last-child img {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+
+    nav > img {
+        display: block;
+        margin: 0 auto;
+    }
+
+
+}
