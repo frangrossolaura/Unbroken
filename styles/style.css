@@ -510,3 +510,64 @@ footer {
         gap: 60px;
     }
 } */
+
+@media (max-width: 480px) {
+    
+    .descuento {
+        font-size: 11px;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    nav {
+        background-color: white;
+        width: 100%;
+        padding: 11px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Ocultamos todas todas las ul listas */
+
+    .nav ul {
+        display: none;
+    }
+
+    /* Mostramos solamente la primera ul que es la que contiene el menu hamburguesa */
+
+    .nav:first-child ul {
+        display: flex;
+    }
+
+    /* Ocultamos TODOS los li de la primer ul  */
+
+    .nav:first-child ul li {
+        display: none;
+    }
+
+    /* Solamente mostramos el ultimo li de la primer ul osea, mostramos el menu hamburguesa */
+
+    .nav:first-child ul li:last-child {
+        display: block;
+    }
+
+    /* Le doy este margin left al logo para que quede bien centrado*/
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    /* Muestro y ajusto el tamaño del menu */
+    
+    .nav ul li:last-child img {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+
+    nav > img {
+        display: block;
+        margin: 0 auto;
+    }
+}
