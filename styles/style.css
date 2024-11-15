@@ -456,7 +456,7 @@ footer ul li {
 @media (max-width: 480px) {
     
     .descuento {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 400;
         width: 100%;
     }
@@ -506,10 +506,35 @@ footer ul li {
         display: block;
         width: 35px;
         height: 35px;
+        align-items: center;
     }
 
     nav > img {
         display: block;
         margin: 0 auto;
     }
+
+    .contenido-principal {
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%; /* Para que haya un "padding" a los laterales*/
+    }
+
+    .contenido-principal p {
+        font-size: 20px;
+    }
+
+    .contenido-principal h1 {
+        font-size: 35px;
+    }
+
+    .contenido-principal button {
+        width: 180px;
+        margin: 20px auto 0; /* Centramos el botón y le damos margen superior */
+        display: block; /* Asegura que el botón se muestre como bloque */
+    }
+
 }
