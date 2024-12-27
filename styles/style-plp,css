@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+
+.hamburguer {
+    display: none;
+}
+
+.nav-plp-container {
+    background-color: white;
+    padding: 11px 50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-plp ul {
+    display: flex;
+    list-style: none;
+    gap:40px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: color 0.5s ease;
+    margin-bottom: 0px;
+}
+
+.nav-plp ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-plp a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    position: relative; /* Necesario para el efecto */
+    color: black; /* Color del texto */
+    padding: 5px; /* Espaciado interno del enlace */
+    display: inline-block; /* Asegura que el enlace sea tratado como un bloque para el efecto */
+}
+
+.nav-plp a::after {
+    content: ""; /* Crea un elemento virtual */
+    position: absolute; /* Relativo al enlace */
+    left: 0; /* Empieza desde el lado izquierdo */
+    bottom: 0; /* Ubicado justo debajo del texto */
+    width: 0; /* Inicialmente, la línea no tiene ancho */
+    height: 2px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+    transition: width 0.3s ease; /* Animación suave para la línea */
+}
+
+.nav-plp a:hover::after {
+    width: 100%; /* Expande la línea completamente al hacer hover */
+}
+
+.principal-plp {
+    background-color: rgb(243, 243, 243);
+    padding: 50px 50px 50px 50px;
+}
+
+.principal-plp h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.principal-plp h3 {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.filtros {
+    display: flex;
+    padding: 20px 0px 15px 0px;
+    gap: 20px;
+}
+
+.contenedor-productos-plp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productos {
+    width: 20%;
+}
+
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.productos:hover {
+    padding: 10px 10px;
+    background-color: rgb(244, 244, 244);
+    transition: color 1s ease;
+    border-radius: 5px;
+}
+
+.productos img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nombre-precio {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 10px 10px;
+}
+
+.nombre-precio h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nombre-precio h4 {
+    font-size: 20px;
+    font-weight: 400;
+    flex-grow: 0; /* Evita que h4 crezca */
+    white-space: nowrap; /* Asegura que no se corte el texto en líneas */
+}
+
+.productos h5 {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px 10px 10px 10px;
+    color: #983636;
+}
+
+.button-comprar {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px 35px;
+
+    background-color: black;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/*
+Cuando esté en UN DIV de la sección productos y haga hover en la imagen...
+*/
+
+.productos:hover img {
+    filter: blur(3px);
+}
+
+/*
+Cuando esté en UN DIV de la sección productos y haga hover en el button...
+*/
+
+.productos:hover .button-comprar {
+    opacity: 1;
+    pointer-events: auto;
+    border-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    padding: 40px 50px 40px 50px;
+    gap: 80px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+footer ul li {
+    font-size: 18px;
+}
+
+footer ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 150px;
+}
+
+.logo-footer {
+    width: 300px;
+}
+
+.footer-1 h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-3 h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-3 h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
